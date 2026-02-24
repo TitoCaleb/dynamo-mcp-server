@@ -1,0 +1,23 @@
+{
+  "name": "dynamodb-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for DynamoDB operations – deployed as AWS Lambda (Streamable HTTP transport)",
+  "main": "dist/handlers/dynamodb.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.700.0",
+    "@aws-sdk/util-dynamodb": "^3.700.0",
+    "@blum-rivendell/mcp": "file:../blum-rivendell-mcp",
+    "@tsconfig/node20": "^20.1.9",
+    "source-map-support": "^0.5.21",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
+    "@types/node": "^22.0.0",
+    "@types/source-map-support": "^0.5.10",
+    "typescript": "^5.7.0"
+  }
+}

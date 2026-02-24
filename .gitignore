@@ -1,0 +1,8 @@
+.aws-sam
+node_modules
+coverage
+.idea
+.vscode
+dist
+junit.xml
+.npmrc
