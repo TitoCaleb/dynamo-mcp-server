@@ -4,12 +4,14 @@
   "description": "MCP server for DynamoDB operations – deployed as AWS Lambda (Streamable HTTP transport)",
   "main": "dist/handlers/dynamodb.js",
   "scripts": {
+    "prepare": "npm run co:login",
+    "co:login": "aws codeartifact login --tool npm --repository mcp --domain rivendell --profile blum",
     "build": "tsc"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.700.0",
     "@aws-sdk/util-dynamodb": "^3.700.0",
-    "@blum-rivendell/mcp": "file:../blum-rivendell-mcp",
+    "@blum-rivendell/mcp": "^1.0.1",
     "@tsconfig/node20": "^20.1.9",
     "source-map-support": "^0.5.21",
     "zod": "^3.23.0"
